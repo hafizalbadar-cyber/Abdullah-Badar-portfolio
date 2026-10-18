@@ -388,7 +388,7 @@ Abdullah Badar
               </a>
 
               <a
-                href="https://github.com/hafizalbadar-cyber"
+      href="https://wa.me/923008115288"
                 target="_blank"
                 className="px-8 py-4 rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
               >
@@ -484,9 +484,12 @@ Abdullah Badar
             <br />
             <br />
             Currently, I’m completing my final year while continuing to work on
-            real-world products and my Final Year Project, SafeZone — a smart
-            emergency evacuation system combining web, mobile, IoT, and
-            intelligent routing.
+            real-world products and my Final Year Project,Transcenda AI Video Insight System —
+              An intelligent AI-powered platform that extracts meaningful insights
+                from video data for multiple use cases. It leverages advanced video 
+                  analysis to transform raw footage into actionable information, 
+                    enabling smarter decision-making, automation, and real-time monitoring.
+
           </p>
         </div>
       </section>
