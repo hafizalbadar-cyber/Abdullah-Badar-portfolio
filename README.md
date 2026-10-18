@@ -1,4 +1,4 @@
-# Muhammad Awais Portfolio
+# Abdullah Badar Portfolio
 
 Modern developer portfolio built using Next.js, Tailwind CSS, and Framer Motion.
 
