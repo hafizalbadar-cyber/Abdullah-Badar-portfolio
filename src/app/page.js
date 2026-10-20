@@ -171,6 +171,78 @@ export default function Home() {
     },
   ];
 
+  const projects =[
+
+     {
+
+
+      title: "Zubair Ahmad – portfolio Website",
+
+      description:"Chairman, District Peace Committee, Khairpur. Also Principal, LandLord, businessman and community leader serving Khairpur Mirs.",
+      tech: "Next.js • React • Responsive UI",
+
+
+      live: "https://zubair-ahmed-phulpoto.vercel.app/",
+
+      liveText: "Visit Website",
+
+      status: "Live",
+
+      image:
+        "/images/Zubair.jpeg"
+
+
+    },
+
+{
+
+
+      title: "TCS Courier Management  – Project Website",
+
+      description:"TCS Courier Management is an advanced web programming project built with React Native and Expo that lets users book, track and manage parcels through a mobile-friendly app deployable on the web.",
+      tech: "Next.js • React • Responsive UI",
+
+
+      live: "https://tcs-project-sable.vercel.app/",
+
+      liveText: "Visit Project",
+
+      status: "Live",
+
+      image:
+        "/images/tcs.png"
+
+
+    },
+
+
+    {
+
+
+      title: "Masood – portfolio Website",
+
+      description:
+        "I’m Masood, a freelance eBay specialist. I help sellers remove defects and feedback that hurt their seller standing,",
+      tech: "Next.js • React • Responsive UI",
+
+
+      live: "https://masood1.vercel.app/",
+
+      liveText: "Visit Website",
+
+      status: "Live",
+
+      image:
+        "/images/masood.jpg"
+
+
+    },
+
+
+
+
+  ]
+
 
   const timeline = [
     {
@@ -389,7 +461,7 @@ Abdullah Badar
 
               <a
       href="https://wa.me/923008115288"
-                target="_blank"
+                       target="_blank"
                 className="px-8 py-4 rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
               >
                 Lets Work Together
@@ -484,12 +556,9 @@ Abdullah Badar
             <br />
             <br />
             Currently, I’m completing my final year while continuing to work on
-            real-world products and my Final Year Project,Transcenda AI Video Insight System —
-              An intelligent AI-powered platform that extracts meaningful insights
-                from video data for multiple use cases. It leverages advanced video 
-                  analysis to transform raw footage into actionable information, 
-                    enabling smarter decision-making, automation, and real-time monitoring.
-
+            real-world products and my Final Year Project, SafeZone — a smart
+            emergency evacuation system combining web, mobile, IoT, and
+            intelligent routing.
           </p>
         </div>
       </section>
@@ -532,6 +601,104 @@ Abdullah Badar
       </section>
 
      
+      {/* Projects */}
+
+      <section id="projects" className="py-32 px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedTitle title="Featured Projects" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 80,
+                  scale: 0.95,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.03,
+                  rotateX: 5,
+                  rotateY: -5,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  type: "spring",
+                }}
+                className="group transform-gpu overflow-hidden rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-xl hover:border-blue-500 hover:shadow-[0_0_60px_rgba(59,130,246,0.5)] transition-all duration-500"
+              >
+                <div className="overflow-hidden h-[200px] sm:h-[230px] lg:h-[250px]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                  />
+                </div>
+
+                <div className="p-5 sm:p-6 lg:p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight">
+                      {project.title}
+                    </h3>
+
+                    {project.status && (
+                      <span
+                        className={`text-xs font-semibold px-3 py-1 rounded-full border ${
+                          project.status === "Under Development"
+                            ? "text-yellow-400 border-yellow-500/40 bg-yellow-500/10"
+                            : "text-green-400 border-green-500/40 bg-green-500/10"
+                        }`}
+                      >
+                        {project.status}
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="text-gray-400 text-sm sm:text-base leading-7 mb-6">
+                    {project.description}
+                  </p>
+
+                  <p className="text-blue-400 mb-8">{project.tech}</p>
+                  <div className="flex gap-3 flex-wrap">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+                      >
+                        <FaGithub />
+                        GitHub
+                      </a>
+                    )}
+
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+                      >
+                        <FaExternalLinkAlt />
+
+                        {project.liveText || "Live Demo"}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Journey */}
 
