@@ -238,6 +238,20 @@ export default function Home() {
 
     },
 
+    
+  {
+  title: "Readers Haven – Library Website",
+  description:
+    "A team-based library website project developed for the DevOps Fundamentals assignment. We collaborated using GitHub and containerized the website with Docker, built images, and deployed the application.",
+  tech: "HTML • CSS • Docker • GitHub • Vercel",
+  live: "https://readers-haven-libary.vercel.app/index.html",
+  liveText: "Visit Website",
+  status: "Live",
+  image: "/images/readers-haven.png"
+},
+
+
+    
 
 
 
